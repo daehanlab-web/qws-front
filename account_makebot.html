@@ -47,26 +47,27 @@
       <h1 id="test-mobile">
         <a href="main.html" style="color: #000000;"><img src="daehanlab_ico.png" width="25px"></a>&nbsp<a href="main.html" style="color: #000000;">QLab Web Service</a>&nbsp&nbsp&nbsp
         <div style="font-size: 15px;">
-          <a href="service.html" style="color: #000000;" id="title_text_1">Services</a> | 
-          <a href="billing.html" style="color: #000000;" id="title_text_2">Billing</a> | 
-          <a href="reference.html" style="color: #000000;" id="title_text_3">Reference</a> | 
-          <a href="contact.html" style="color: #000000;" id="title_text_4">Contact</a> | 
           <a href="signin.html" style="color: #000000;" id="title_text_5">Sign in</a> | 
           <a href="signup.html" style="color: #000000;" id="title_text_6">Sign up</a> | 
           <a href="javascript:change_vis_sel_lang();" style="color: #000000;">🌐</a> <div id="sel_lang" style="visibility: hidden;">[ <a href="main.html?lang=en" style="color:#000000;">English</a> | <a href="main.html?lang=ko" style="color:#000000;">한국어</a> ]</div>
         </div>
       </h1>
       
-      <div>
-        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeU05aU_GZmArq7veyJTJYeOtQ9zT3LqkgniCZtIH1W12Up0w/viewform?embedded=true" width=640 height=911 frameborder="0" marginheight="0" marginwidth="0">Loading… Please Wait 🙏</iframe>
+      <!-- sign in form -->
+      <h2>Sign in with makebot</h2>
+      <div style="text-align: center;">
+        <h3>makebot ID</h3><input></input> 
+        <h3>Password</h3><input></input> 
+        <br><br><button>Continue</button>
+        <h2></h2>
       </div>
-      
+
     <div style="font-size: 15px;">
       © 2024 QLab. All rights reserved. | This is a Project of Daehan Lab. (<a style="color:#000000;" href="https://daehanlab.kro.kr" id="bottom_text_1">Learn More</a>)
     </div>
     </div>
 
-    <script src="./lang/main.js"></script>
+    <script src="./lang/signin.js"></script>
     <script>
       const available_lang = ["ko", "en"];
       const ids = ["title_text_1", "title_text_2", "title_text_3", "title_text_4", "title_text_5", "title_text_6", 'bottom_text_1'];
@@ -92,7 +93,7 @@
           cur.innerText = sel_lang_pack[ids[id]];
         }
       } else {
-        //window.location.href = 'https://qws.kro.kr/main?lang=en';
+        // pass
       }
     </script>
   </body>

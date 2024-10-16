@@ -47,26 +47,59 @@
       <h1 id="test-mobile">
         <a href="main.html" style="color: #000000;"><img src="daehanlab_ico.png" width="25px"></a>&nbsp<a href="main.html" style="color: #000000;">QLab Web Service</a>&nbsp&nbsp&nbsp
         <div style="font-size: 15px;">
-          <a href="service.html" style="color: #000000;" id="title_text_1">Services</a> | 
-          <a href="billing.html" style="color: #000000;" id="title_text_2">Billing</a> | 
-          <a href="reference.html" style="color: #000000;" id="title_text_3">Reference</a> | 
-          <a href="contact.html" style="color: #000000;" id="title_text_4">Contact</a> | 
           <a href="signin.html" style="color: #000000;" id="title_text_5">Sign in</a> | 
           <a href="signup.html" style="color: #000000;" id="title_text_6">Sign up</a> | 
           <a href="javascript:change_vis_sel_lang();" style="color: #000000;">🌐</a> <div id="sel_lang" style="visibility: hidden;">[ <a href="main.html?lang=en" style="color:#000000;">English</a> | <a href="main.html?lang=ko" style="color:#000000;">한국어</a> ]</div>
         </div>
       </h1>
       
-      <div>
-        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeU05aU_GZmArq7veyJTJYeOtQ9zT3LqkgniCZtIH1W12Up0w/viewform?embedded=true" width=640 height=911 frameborder="0" marginheight="0" marginwidth="0">Loading… Please Wait 🙏</iframe>
+      <!-- sign up form -->
+      <h2>Select Account Type</h2>
+      <div style="text-align: center;">
+        <button>Personal</button>&nbsp&nbsp&nbsp<button>Industrial</button>&nbsp&nbsp&nbsp<button>Edu</button>
+        <h2></h2>
       </div>
-      
+      <h2>Enter Your Email</h2>
+      <div style="text-align: center;">
+        <input placeholder="Email"></input><br><br>
+        Please verify your email. If verification email wasn't sent, click <a href="">here.</a><br><br>
+        <button>Verify</button>
+        <h2></h2>
+      </div>
+      <h2>Enter a Username</h2>
+      <div style="text-align: center;">
+        <input placeholder="Username"></input><br><br>
+        <button>Continue</button>
+        <h2></h2>
+      </div>
+      <h2>Enter a Password</h2>
+      <div style="text-align: center;">
+        <input type='password' placeholder="Password"></input><br><br>
+        <input type='password' placeholder="Password (Re)"></input><br><br>
+        <button>Continue</button>
+        <h2></h2>
+      </div>
+      <h2>Terms of Service</h2>
+      <div style="text-align: center;">
+        <iframe></iframe><br><br>
+        <button>Accept</button>&nbsp&nbsp&nbsp<button>Decline(Quit Signing Up)</button>
+        <h2></h2>
+      </div>
+      <h2>Your account has been successfully created.</h2>
+      <div style="text-align: center;">
+        This page will be redirected in 5 seconds.<h2></h2>
+      </div>
+      <h2>Hmm. It looks like an error has occured :(</h2>
+      <div style="text-align: center;">
+        Please retry it after a few minutes.<h2></h2>
+      </div>
+
     <div style="font-size: 15px;">
       © 2024 QLab. All rights reserved. | This is a Project of Daehan Lab. (<a style="color:#000000;" href="https://daehanlab.kro.kr" id="bottom_text_1">Learn More</a>)
     </div>
     </div>
 
-    <script src="./lang/main.js"></script>
+    <script src="./lang/signin.js"></script>
     <script>
       const available_lang = ["ko", "en"];
       const ids = ["title_text_1", "title_text_2", "title_text_3", "title_text_4", "title_text_5", "title_text_6", 'bottom_text_1'];
@@ -92,7 +125,7 @@
           cur.innerText = sel_lang_pack[ids[id]];
         }
       } else {
-        //window.location.href = 'https://qws.kro.kr/main?lang=en';
+        // pass
       }
     </script>
   </body>
