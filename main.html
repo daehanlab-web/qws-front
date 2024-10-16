@@ -53,13 +53,43 @@
           <a href="blog.html" style="color: #000000;" id="title_text_4">Contact</a> | 
           <a href="http://qlab.kro.kr/" style="color: #000000;" id="title_text_5">Sign in</a> | 
           <a href="http://console.qlab.kro.kr/" style="color: #000000;" id="title_text_6">Sign up</a> | 
-          <a href="notice.html" style="color: #000000;">🌐</a>
+          <a href="javascript:change_vis_sel_lang();" style="color: #000000;">🌐</a> <div id="sel_lang" style="visibility: hidden;">[ <a href="main.html?lang=en">English</a> <a href="main.html?lang=ko">한국어</a> ]</div>
         </div>
       </h1>
       
     <div style="font-size: 15px;">
       © 2024 QLab. All rights reserved. | This is a Project of Daehan Lab. (<a style="color:#000000;" href="https://daehanlab.kro.kr">Learn More</a>)
-    </div>   
     </div>
+    </div>
+
+    <script src="./lang/langpack_10162024.js"></script>
+    <script>
+      const available_lang = ["ko", "en"];
+      const ids = ["title_text_1", "title_text_2", "title_text_3", "title_text_4", "title_text_5", "title_text_6"];
+      vis_sel_lang = false;
+      const current_url = new URL(window.location.href);
+      const url_params = current_url.searchParams;
+      function change_vis_sel_lang() {
+        cur = document.getElementById("sel_lang");
+        if (vis_sel_lang) {
+          cur.style = "visibility: hidden;";
+          vis_sel_lang = false;
+        } else {
+          cur.style = "visibility: visible;";
+          vis_sel_lang = true;
+        }
+      }
+      
+      // language setting
+      if (available_lang.includes(url_params.get('lang'))) {
+        sel_lang_pack = lang_pack[url_params.get('lang')];
+        for (var id in ids) {
+          cur = document.getElementById(ids[id])
+          cur.innerText = sel_lang_pack[ids[id]];
+        }
+      } else {
+        window.location.href = 'https://qws.kro.kr/main?lang=en';
+      }
+    </script>
   </body>
 </html>
